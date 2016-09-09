@@ -12,7 +12,7 @@
   </a>
 
   <a href="https://github.com/nhz-io/ref-node/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/@nhz.io/ref-node.svg?style=flat"
+    <img src="https://img.shields.io/github/license/nhz-io/ref-node.svg?style=flat"
          alt="License">
   </a>
 
