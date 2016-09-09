@@ -1,0 +1,25 @@
+{
+  "name": "@nhz.io/ref-node",
+  "version": "1.0.0",
+  "description": "Value reference node Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "install": "npm test",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhz-io/ref-node.git"
+  },
+  "keywords": [
+    "ref-node",
+    "nhz.io"
+  ],
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nhz-io/ref-node/issues"
+  },
+  "homepage": "https://github.com/nhz-io/ref-node"
+}
