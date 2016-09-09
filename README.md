@@ -55,7 +55,7 @@ will reference `'bar'` value of the `a.b` Array at index `1`
 ## Example
 
 * Object key reference
-```
+```javascript
 const RefNode = require('@nhz.io/ref-node')
 const root = {a: {b: 'foobar'}}
 const node = new RefNode(root, ['a', 'b'])
@@ -65,7 +65,7 @@ console.log(root.a.b) // Prints 'barfoo'
 ```
 
 * Array element reference
-```
+```javascript
 const RefNode = require('@nhz.io/ref-node')
 const root = {a: {b: [null, 'foobar']}}
 const node = new RefNode(root, ['a', 'b', 1])
