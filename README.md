@@ -58,9 +58,9 @@ will reference `'bar'` value of the `a.b` Array at index `1`
 ```
 const RefNode = require('@nhz.io/ref-node')
 const root = {a: {b: 'foobar'}}
-const refNode = new RefNode(root, ['a', 'b'])
+const node = new RefNode(root, ['a', 'b'])
 console.log(refNode.value) // Prints 'foobar'
-refNode.value = 'barfoo'
+node.value = 'barfoo'
 console.log(root.a.b) // Prints 'barfoo'
 ```
 
@@ -70,6 +70,6 @@ const RefNode = require('@nhz.io/ref-node')
 const root = {a: {b: [null, 'foobar']}}
 const node = new RefNode(root, ['a', 'b', 1])
 console.log(refNode.value) // Prints 'foobar'
-refNode.value = 'barfoo'
+node.value = 'barfoo'
 console.log(root.a.b[1]) // Prints 'barfoo'
 ```
