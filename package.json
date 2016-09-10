@@ -1,6 +1,6 @@
 {
   "name": "@nhz.io/ref-node",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Value reference node Class",
   "main": "index.js",
   "scripts": {
