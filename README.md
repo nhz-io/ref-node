@@ -22,7 +22,7 @@
   </a>  
 </p>
 
-<h2 align="center">"Value reference node" Class<h2>
+<h3 align="center">"Value reference node" Class<h2>
 
 ## Install
 ```
