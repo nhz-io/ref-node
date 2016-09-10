@@ -22,40 +22,38 @@
   </a>  
 </p>
 
-<p align="center">
-    "Value reference node" Class
-</p>
+<h2 align="center">"Value reference node" Class<h2>
 
 ## Install
 ```
 npm i -S @nhz.io/ref-node
 ```
 
-## Api
-
-### Class: RefNode
-#### new RefNode(root, path)
+## Class: RefNode
+### new RefNode(root, path)
 * `root` - `{Array | Object}`
 * `path` - `{Array<String | Number>}`
 
-Creates a reference node for the root object at the given path.
+#### Creates a reference node for the root object at the given path.
 * With root: `{a: {b: 'foo'}}` and path: `['a', 'b']`, the node will
 reference `'foo'` value of the `a.b` Object   
 
 * With root; `{a: b: [null, 'bar']}` and path: `['a', 'b', 1]`, the node
 will reference `'bar'` value of the `a.b` Array at index `1`
 
-#### Properties
+### Properties
 
 * `root` - Root getter/setter
 * `parent` - Parent getter
 * `path` -  Path getter/setter
 * `key` - Key getter/setter
+* `resolves` - Resolves getter
 
 ## Example
 
-* Object key reference
+### Object key reference
 ```javascript
+
 const RefNode = require('@nhz.io/ref-node')
 const root = {a: {b: 'foobar'}}
 const node = new RefNode(root, ['a', 'b'])
@@ -64,7 +62,7 @@ node.value = 'barfoo'
 console.log(root.a.b) // Prints 'barfoo'
 ```
 
-* Array element reference
+### Array element reference
 ```javascript
 const RefNode = require('@nhz.io/ref-node')
 const root = {a: {b: [null, 'foobar']}}
