@@ -87,3 +87,8 @@ t.throws(() => (new RefNode(null, [])).value = 1, 'Fail Missing parent')
     t.equal(node.value, 'changed', 'Updated node value')
     t.equal(root.p.n, 'changed', 'Updated parent object')
 }
+
+t.ok((new RefNode({a:{b: undefined}}, ['a', 'b']).resolves), 'Does not resolve')
+t.ok((new RefNode({a:[null, null]}, ['a', 0]).resolves), 'Does not resolve')
+t.ok(!(new RefNode({a:{}}, ['a', 'b'])).resolves, 'Resolves')
+t.ok(!(new RefNode({a:[]}, ['a', 1])).resolves, 'Resolves')

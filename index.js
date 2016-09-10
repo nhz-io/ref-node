@@ -17,7 +17,7 @@ module.exports = class RefNode {
 	}
 
 	get parent() {
-		return this[PATH].slice(0, -1).reduce((a, k) => a[k], this[ROOT])
+		return this[PATH].slice(0, -1).reduce((a, k) => a && a[k], this[ROOT])
 	}
 
 	get path() {
@@ -43,4 +43,9 @@ module.exports = class RefNode {
 	set value(value) {
 		this.parent[this[PATH].slice(-1)[0]] = value
 	}
+
+    get resolves() {
+        const parent = this.parent
+        return parent && parent.hasOwnProperty(this.key)
+    }
 }
